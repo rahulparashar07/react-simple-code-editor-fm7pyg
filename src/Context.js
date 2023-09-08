@@ -13,6 +13,7 @@ const contextProvider = function (props) {
   return (
     <NoteContext.Provider value={{ notes: ctxObject, setNotes: setNotes }}>
       {props.children}
+      
     </NoteContext.Provider>
   );
 };
