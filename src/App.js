@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import Child from './Child';
 import Form from './form';
 import store from './store';
+import ApiCall from './superComponent'
 import NoteContext from './Context';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
   };
   return (
     <div>
+      <ApiCall apiCall={code}/>
       <Child changeCode={changeCode} />
       <br />
       <Form setObject={setObject}></Form>
